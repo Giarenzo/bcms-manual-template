@@ -1,6 +1,6 @@
 # BCMS Manual Template
 
-This is the base template for all BCMS® airport client manuals. Each client gets their own branded copy deployed at `{slug}.manual.bcms.ai`.
+This is the base template for all BCMS® airport client manuals. Each client gets their own branded copy deployed at `{slug}.manual.w3ns.io`.
 
 ---
 
@@ -63,11 +63,11 @@ In the new repo → Settings → Secrets → Actions:
 
 ### 4. Push → auto-deploys
 
-Push any commit to `main`. The site will be live at `https://{slug}.manual.bcms.ai` in ~2 minutes.
+Push any commit to `main`. The site will be live at `https://{slug}.manual.w3ns.io` in ~2 minutes.
 
 ### 5. DNS
 
-Ensure `*.manual.bcms.ai` has a wildcard CNAME/A record pointing to the server IP.
+Ensure `*.manual.w3ns.io` has a wildcard CNAME/A record pointing to the server IP.
 Caddy handles wildcard TLS automatically via DNS challenge.
 
 ---
@@ -87,7 +87,7 @@ mkdocs serve
 `/etc/caddy/Caddyfile` on `frontierlab`:
 
 ```caddyfile
-*.manual.bcms.ai {
+*.manual.w3ns.io {
     tls {
         dns cloudflare {env.CF_API_TOKEN}
     }

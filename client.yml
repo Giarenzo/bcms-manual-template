@@ -1,6 +1,7 @@
 client:
   name: "BCMS® System Manual"
   slug: template
+  domain: manual.w3ns.io
   language: en
   primary_color: "#f5a623"
   accent_color: "#333333"

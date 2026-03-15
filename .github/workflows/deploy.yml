@@ -71,4 +71,4 @@ jobs:
 
       - name: Notify deploy complete
         run: |
-          echo "✓ Deployed ${{ steps.client.outputs.slug }} → https://${{ steps.client.outputs.slug }}.manual.bcms.ai"
+          echo "✓ Deployed ${{ steps.client.outputs.slug }} → https://${{ steps.client.outputs.slug }}.manual.w3ns.io"
