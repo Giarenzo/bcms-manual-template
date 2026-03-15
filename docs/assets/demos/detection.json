@@ -1,0 +1,62 @@
+{
+  "steps": [
+    {
+      "id": "welcome",
+      "title": "Detection Log Tour",
+      "text": "This tour walks through the <strong>Detection Details</strong> page — the real-time log of every bird detection recorded by BCMS. It's auto-populated by the system; no manual input is needed.",
+      "buttons": [
+        { "text": "Skip", "action": "cancel", "classes": "shepherd-button-secondary" },
+        { "text": "Start →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "topbar",
+      "title": "Top Bar Controls",
+      "text": "<strong>Calendar icon</strong> (top-right): select the date range for displayed entries.<br><strong>Printer / Download icon</strong> (top-left): export the log as XLSX, ODF, or PDF.<br><strong>Two-arrow icon</strong>: reset all table filters to default.<br><strong>Grid icon</strong>: choose which columns to show.",
+      "attachTo": { "element": "#the-top-bar", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "log-columns",
+      "title": "Key Log Columns",
+      "text": "Each row is one detection event. Important columns include:<br>• <strong>Local Risk Index</strong> — color-coded risk (blue → red)<br>• <strong>Species</strong> — auto-classified by AI; unidentified if too far or not in database<br>• <strong>Sector</strong> — where the event occurred<br>• <strong>Event</strong> — standing or flying<br>• <strong>Number / Speed / Height</strong> — quantity and motion data",
+      "attachTo": { "element": "#the-log", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "row-actions",
+      "title": "Row Actions",
+      "text": "At the end of each row you'll find two icons:<br>• <strong>Camera icon</strong> — opens the Video Viewer to watch the detection recording<br>• <strong>Edit icon (blue)</strong> — manually correct the event (e.g. wrong species label, expert review)<br><br><em>Double-clicking</em> any row opens a full JSON data pop-up that can be copied or downloaded.",
+      "attachTo": { "element": "#the-log", "on": "top" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "filters",
+      "title": "Filtering & Sorting",
+      "text": "The <strong>first row of the table</strong> acts as a live filter. Type in any cell to narrow results — filter by camera, species, sector, or risk level simultaneously. Click any column header to sort ascending or descending.",
+      "attachTo": { "element": "#the-log", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "done",
+      "title": "Detection Tour Complete ✓",
+      "text": "You've covered the full Detection log. Next, explore <strong>Impact</strong> to learn how bird-strike incidents are manually reported, or check <strong>Statistics → Detection</strong> for trend charts.",
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Finish ✓", "action": "complete", "classes": "shepherd-button-primary" }
+      ]
+    }
+  ]
+}

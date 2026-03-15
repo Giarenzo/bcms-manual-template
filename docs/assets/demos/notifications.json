@@ -1,0 +1,42 @@
+{
+  "steps": [
+    {
+      "id": "welcome",
+      "title": "Notifications Tour",
+      "text": "The <strong>Notifications</strong> page lets you configure automated alerts — email or SMS — so your team is informed of critical events in real time without needing to monitor the screen constantly.",
+      "buttons": [
+        { "text": "Skip", "action": "cancel", "classes": "shepherd-button-secondary" },
+        { "text": "Start →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "personal-toggle",
+      "title": "Personal Notification Toggle",
+      "text": "Before configuring notifications here, note that you can <strong>globally enable or disable</strong> notifications for your own profile via the <em>person icon → Preferences</em> in the top-right corner of the BCMS app (see <strong>The Top Bar</strong> chapter).",
+      "attachTo": { "element": "h1, h2, h3", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "setup",
+      "title": "Creating a Notification",
+      "text": "Click the <strong>Add button</strong> (top-left of the log table) to create a new notification rule, or the <strong>Edit icon</strong> at the end of an existing row to modify one.<br><br><strong>Tab 1</strong>: enter a description and the destination email addresses / phone numbers. Click <em>Next</em>.<br><strong>Tab 2</strong>: choose which events trigger this notification and the active time window (e.g. 9 AM–5 PM or 24/7).<br>Click <strong>Save</strong> to confirm.",
+      "attachTo": { "element": "#setting-up-and-editing-notifications", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "done",
+      "title": "Notifications Tour Complete ✓",
+      "text": "Your team will now receive automated alerts for the events that matter. Continue to <strong>Statistics → Detection</strong> to explore trend analysis and reports.",
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Finish ✓", "action": "complete", "classes": "shepherd-button-primary" }
+      ]
+    }
+  ]
+}

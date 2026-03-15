@@ -1,0 +1,72 @@
+{
+  "steps": [
+    {
+      "id": "welcome",
+      "title": "Inspection Forms Tour",
+      "text": "The <strong>Inspection</strong> section holds three distinct log forms for physical visits, remote surveys, and mortality searches. All share a common layout but serve different operational purposes.",
+      "buttons": [
+        { "text": "Skip", "action": "cancel", "classes": "shepherd-button-secondary" },
+        { "text": "Start →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "three-tabs",
+      "title": "Three Inspection Types",
+      "text": "The three tabs at the top of the page are:<br>1. <strong>Site Inspection</strong> — log a physical visit to a sector<br>2. <strong>Bird Observation Survey</strong> — log a remote PTZ camera check<br>3. <strong>Mortality Search</strong> — log a search for birds trapped in mud or sand<br><br>Each has its own log table and entry form.",
+      "attachTo": { "element": "#inspection-forms", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "site-inspection",
+      "title": "Site Inspection",
+      "text": "Use this tab when a <strong>physical visit</strong> to a sector is performed or requested. Click the <strong>orange + icon</strong> to open the form. Completed forms appear as rows in the log table below.",
+      "attachTo": { "element": "#site-inspection", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "bird-survey",
+      "title": "Bird Observation Survey",
+      "text": "Use this tab to log a <strong>remote check</strong> via a camera's PTZ function — no physical visit required. Useful for routine checks or when physical access is impractical.",
+      "attachTo": { "element": "#bird-observation-survey", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "mortality",
+      "title": "Mortality Search",
+      "text": "Use this tab to log a <strong>mortality search</strong> — a check for birds trapped in mud, sand, or similar hazards. If a search is needed or requested, it must be logged here.",
+      "attachTo": { "element": "#mortality-search", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "form-fields",
+      "title": "Common Form Fields",
+      "text": "All three forms share common fields:<br>• <strong>Start / End time</strong> and supervisor details<br>• <strong>Weather conditions</strong> at time of inspection<br>• <strong>Cause of inspection</strong> (routine, incident response, follow-up)<br>• <strong>Photos</strong> and outcome notes<br>• Agricultural activity and deterrence measures in place",
+      "attachTo": { "element": "#form-options", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "done",
+      "title": "Inspection Tour Complete ✓",
+      "text": "You now know how to log all three types of inspection. Continue to <strong>Utilities → Notifications</strong> to set up alerts for your team.",
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Finish ✓", "action": "complete", "classes": "shepherd-button-primary" }
+      ]
+    }
+  ]
+}

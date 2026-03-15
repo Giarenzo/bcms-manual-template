@@ -1,3 +1,5 @@
+<button class="md-button md-button--primary" data-tour="notifications">▶ Start Interactive Tour</button>
+
 The Utilities section of the BCMS system allows users to configure various settings to optimize their experience and ensure they receive important updates and alerts.
 
 The notification preferences feature is designed to keep users informed about critical events, system updates, and alerts in real time. This section allows users to customize how and when they receive notifications based on their roles and responsibilities.

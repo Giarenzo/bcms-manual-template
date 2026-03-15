@@ -1,6 +1,8 @@
-The BCMS dashboard provides a comprehensive view of all critical information and system functionalities. 
+The BCMS dashboard provides a comprehensive view of all critical information and system functionalities.
 
 It displays a map of the area in which BCMS is installed and serves as the central hub for monitoring and managing bird activities and other relevant data.
+
+<button class="md-button md-button--primary" data-tour="dashboard">▶ Start Interactive Tour</button>
 
 # Several-areas version
 

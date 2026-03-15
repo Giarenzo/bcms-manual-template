@@ -1,0 +1,92 @@
+{
+  "steps": [
+    {
+      "id": "welcome",
+      "title": "Dashboard Overview",
+      "text": "Welcome to the BCMS Dashboard tour. We'll walk through the live map, camera icons, deterrence systems, and how events are displayed. Use the arrows to navigate.",
+      "buttons": [
+        { "text": "Skip", "action": "cancel", "classes": "shepherd-button-secondary" },
+        { "text": "Start →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "live-map",
+      "title": "Live Map",
+      "text": "The live map shows the airport area in real time, including camera positions, deterrence devices, and all bird events detected in the selected timeframe. You can pan, zoom, and click on any element.",
+      "attachTo": { "element": "#live-map", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "cameras",
+      "title": "Cameras on the Map",
+      "text": "Active cameras appear as <strong>orange icons</strong> with a cone showing the real-time direction they are pointing. Click a camera icon to open the Video Viewer for that camera's live feed.",
+      "attachTo": { "element": "#cameras", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "deterrence",
+      "title": "Deterrence Systems",
+      "text": "Deterrence devices (cannons, mechanical falcons) are shown as <strong>colored circles</strong>: 🟢 green = operational, 🔴 red = issue, ⚫ gray = inactive. Right-click any device to view status details or fire it manually.",
+      "attachTo": { "element": "#deterrence-systems", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "events",
+      "title": "Events on the Map",
+      "text": "Detected events are color-coded by risk level: 🔵 blue = low, 🟡 yellow = medium, 🟠 orange = high, 🔴 red = very high. A <strong>square icon</strong> means species unidentified; a <strong>triangle</strong> means species identified. Hover to see movement direction.",
+      "attachTo": { "element": "#events", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "video-viewer",
+      "title": "Event Video Viewer",
+      "text": "Left-click any event to open its <strong>Video Viewer</strong> and watch the detection recording. The bounding box on-screen highlights the detected specimen. Right-click for a quick summary and link to the edit page.",
+      "attachTo": { "element": "#event-video-viewer", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "live-cameras",
+      "title": "Live Cameras Panel",
+      "text": "The <strong>Live Cameras</strong> panel (top-left beside the map) lists all cameras in the selected area. Clicking one opens the Video Viewer for that camera. In desert installations, the Camera Protection function can orient lenses away from sandstorm wind direction.",
+      "attachTo": { "element": "#live-cameras", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "event-summary",
+      "title": "Event Summary",
+      "text": "The <strong>Event Summary</strong> (bottom-left) lists all detections in the selected timeframe. Each entry shows sector risk, species, and flying/standing counts. Click any entry to isolate it on the live map.",
+      "attachTo": { "element": "#event-summary", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "done",
+      "title": "Dashboard Tour Complete ✓",
+      "text": "You now know the key areas of the Dashboard. Head to <strong>Event Management → Detection</strong> to explore how individual detections are logged and reviewed.",
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Finish ✓", "action": "complete", "classes": "shepherd-button-primary" }
+      ]
+    }
+  ]
+}

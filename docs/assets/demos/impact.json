@@ -1,0 +1,52 @@
+{
+  "steps": [
+    {
+      "id": "welcome",
+      "title": "Impact Log Tour",
+      "text": "The <strong>Impact</strong> page is the official bird-strike log. Unlike detections, impacts are entered <em>manually</em> by authorised users (admins only). The form is ICAO-compliant and can integrate directly with ICAO's reporting system.",
+      "buttons": [
+        { "text": "Skip", "action": "cancel", "classes": "shepherd-button-secondary" },
+        { "text": "Start →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "topbar",
+      "title": "Top Bar Controls",
+      "text": "<strong>Orange + icon</strong> (top-left): opens the Bird Strike Reporting Form to log a new incident.<br><strong>Calendar icon</strong> (top-right): filter the log by date range.<br><strong>Printer / Download</strong>: export as XLSX, ODF, or PDF.<br><strong>Grid icon</strong>: choose visible columns.",
+      "attachTo": { "element": "#the-top-bar-and-log", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "form-overview",
+      "title": "Bird Strike Reporting Form",
+      "text": "The form captures all ICAO-required fields for a bird-strike incident. Key information includes: time & date, operator, aircraft model, flight number, weather conditions, flight phase, number of birds, and any affected sectors.",
+      "attachTo": { "element": "#bird-strike-reporting-form", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "form-evidence",
+      "title": "Attaching Evidence",
+      "text": "The form allows you to attach <strong>video evidence</strong> directly from BCMS recordings, as well as photos and other documentation. Use the tabs at the bottom of the form to select affected sectors (click the magnifying glass icon) and attach files.",
+      "attachTo": { "element": "#add-video-evidence", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "done",
+      "title": "Impact Tour Complete ✓",
+      "text": "You can now log bird-strike incidents accurately and in compliance with international standards. Continue to <strong>Inspection</strong> to learn about site visit and survey forms.",
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Finish ✓", "action": "complete", "classes": "shepherd-button-primary" }
+      ]
+    }
+  ]
+}

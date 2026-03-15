@@ -24,8 +24,10 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+  - https://cdn.jsdelivr.net/npm/shepherd.js@13/dist/css/shepherd.css
 
 extra_javascript:
+  - https://cdn.jsdelivr.net/npm/shepherd.js@13/dist/js/shepherd.min.js
   - assets/demos/tours.js
 
 plugins:

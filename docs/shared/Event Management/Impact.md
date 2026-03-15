@@ -1,3 +1,5 @@
+<button class="md-button md-button--primary" data-tour="impact">▶ Start Interactive Tour</button>
+
 This is a log of all recorded bird strikes, i.e. impacts of flying birds against airplanes in the target area.
 
 This page allows you (admins only) to manually record an impact event directly into the system. The input form respects all ICAO requirements and it also allows for additional documentation to be included in the log. This manual form can be directly integrated with ICAO’s input system.

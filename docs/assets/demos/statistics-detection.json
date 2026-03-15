@@ -1,0 +1,62 @@
+{
+  "steps": [
+    {
+      "id": "welcome",
+      "title": "Statistics – Detection Tour",
+      "text": "The <strong>Detection Statistics</strong> page provides five chart views to analyse bird activity patterns over time. This data supports data-driven decisions about deterrence, staffing, and risk management.",
+      "buttons": [
+        { "text": "Skip", "action": "cancel", "classes": "shepherd-button-secondary" },
+        { "text": "Start →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "menu-controls",
+      "title": "Filters & Controls",
+      "text": "<strong>Download icon</strong> (top-left): export all data as XLSX.<br><strong>Calendar icon</strong> (top-right): select the date range.<br><strong>Area selector</strong>: if multiple areas are installed, choose which one to analyse.<br><strong>Species filter</strong>: focus the charts on one or more specific species.",
+      "attachTo": { "element": "#menu", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "time-tab",
+      "title": "Time Tab",
+      "text": "Shows detections broken down by <strong>hour, day, week, or month</strong>. The top frame shows charts; the bottom frame shows numerical totals with flying/standing breakdown — e.g. <em>8/3 (11)</em> means 8 flying + 3 standing = 11 total for that species in that period.",
+      "attachTo": { "element": "#time-tab", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "sector-heatmap",
+      "title": "Sector & Heatmap Tabs",
+      "text": "The <strong>Sector tab</strong> shows a bar chart of detections per sector, helping identify high-activity zones.<br><br>The <strong>Sector Heatmap tab</strong> displays two side-by-side maps: one showing detection count per sector, one showing the average local risk index — both also available as a table below.",
+      "attachTo": { "element": "#sector-heatmap-tab", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "year-flying",
+      "title": "Year Comparison & Flying Direction",
+      "text": "The <strong>Year Comparison tab</strong> overlays multiple years on one bar chart (colour-coded by year) so you can spot seasonal patterns across seasons.<br><br>The <strong>Flying Direction tab</strong> shows a radial diagram of the direction all detected birds were moving — useful for understanding prevailing flight corridors.",
+      "attachTo": { "element": "#year-comparison-tab", "on": "bottom" },
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Next →", "action": "next", "classes": "shepherd-button-primary" }
+      ]
+    },
+    {
+      "id": "done",
+      "title": "Statistics Tour Complete ✓",
+      "text": "You can now extract meaningful trends from your detection data. Check <strong>Statistics → Impact</strong> and <strong>Statistics → Weather</strong> for further analysis tools.",
+      "buttons": [
+        { "text": "← Back", "action": "back", "classes": "shepherd-button-secondary" },
+        { "text": "Finish ✓", "action": "complete", "classes": "shepherd-button-primary" }
+      ]
+    }
+  ]
+}
