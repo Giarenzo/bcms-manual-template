@@ -1,0 +1,59 @@
+site_name: "SITE_NAME_PLACEHOLDER"
+site_url: "https://CLIENT_SLUG_PLACEHOLDER.manual.bcms.ai"
+
+theme:
+  name: material
+  language: LANG_PLACEHOLDER
+  logo: assets/logo.svg
+  favicon: assets/bcms-favicon.png
+  custom_dir: overrides
+
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - assets/demos/tours.js
+
+plugins:
+  - search
+  - macros:
+      include_yaml:
+        - client.yml
+
+nav:
+  - Index: index.md
+  - The Top Bar: "shared/The Top Bar.md"
+  - Live Feed: "shared/Live Feed.md"
+  - Dashboard: shared/Dashboard.md
+  - Bird Deterrents: "shared/Bird Deterrent Sys/BirdDeterrentSys.md"
+  - Events:
+      - Overview: "shared/Event Management/Event Management.md"
+      - Detection: "shared/Event Management/Detection.md"
+      - Impact: "shared/Event Management/Impact.md"
+      - Inspection: "shared/Event Management/Inspection.md"
+  - Utilities:
+      - Overview: "shared/Utilities/Utilities.md"
+      - Notifications: "shared/Utilities/Notifications.md"
+  - Statistics:
+      - Overview: "shared/Statistics/Statistics.md"
+      - Detection: "shared/Statistics/Detection.md"
+      - Impact: "shared/Statistics/Impact.md"
+      - System: "shared/Statistics/System.md"
+  - Registers: "shared/Registers.md"
+  - Administration: "shared/Administration/Administration.md"
+  - Glossary: "shared/Glossario.md"
+  - Client Notes: "client/custom.md"

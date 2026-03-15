@@ -1,0 +1,8 @@
+client:
+  name: "BCMS® System Manual"
+  slug: template
+  language: en
+  primary_color: "#f5a623"
+  accent_color: "#333333"
+  logo: docs/assets/logo.svg
+  favicon: docs/assets/bcms-favicon.png

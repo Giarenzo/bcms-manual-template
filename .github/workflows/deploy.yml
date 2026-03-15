@@ -1,0 +1,74 @@
+name: Deploy Manual
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install mkdocs-material mkdocs-macros-plugin pyyaml
+
+      - name: Read client config
+        id: client
+        run: |
+          python3 - <<'PYEOF'
+          import yaml, os
+          d = yaml.safe_load(open('client.yml'))['client']
+          env_file = os.environ['GITHUB_OUTPUT']
+          with open(env_file, 'a') as f:
+            f.write(f"slug={d['slug']}\n")
+            f.write(f"name={d['name']}\n")
+            f.write(f"language={d.get('language', 'en')}\n")
+            f.write(f"primary_color={d.get('primary_color', '#f5a623')}\n")
+            f.write(f"accent_color={d.get('accent_color', '#333333')}\n")
+          PYEOF
+
+      - name: Substitute placeholders in mkdocs.yml and extra.css
+        run: |
+          sed -i \
+            -e "s|SITE_NAME_PLACEHOLDER|${{ steps.client.outputs.name }}|g" \
+            -e "s|CLIENT_SLUG_PLACEHOLDER|${{ steps.client.outputs.slug }}|g" \
+            -e "s|LANG_PLACEHOLDER|${{ steps.client.outputs.language }}|g" \
+            mkdocs.yml
+          sed -i \
+            -e "s|PRIMARY_COLOR|${{ steps.client.outputs.primary_color }}|g" \
+            -e "s|ACCENT_COLOR|${{ steps.client.outputs.accent_color }}|g" \
+            stylesheets/extra.css
+
+      - name: Build site
+        run: mkdocs build --strict
+
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SERVER_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts 2>/dev/null || true
+
+      - name: Create target directory on server
+        run: |
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no \
+            giarenzo@${{ secrets.SERVER_HOST }} \
+            "mkdir -p /var/www/manuals/${{ steps.client.outputs.slug }}"
+
+      - name: Deploy via rsync
+        run: |
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
+            site/ \
+            giarenzo@${{ secrets.SERVER_HOST }}:/var/www/manuals/${{ steps.client.outputs.slug }}/
+
+      - name: Notify deploy complete
+        run: |
+          echo "✓ Deployed ${{ steps.client.outputs.slug }} → https://${{ steps.client.outputs.slug }}.manual.bcms.ai"
