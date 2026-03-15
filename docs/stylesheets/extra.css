@@ -1,0 +1,124 @@
+/* ----- Client brand colors ----- */
+/* CI injects PRIMARY_COLOR and ACCENT_COLOR via sed before build */
+:root {
+  --md-primary-fg-color:        PRIMARY_COLOR;
+  --md-primary-fg-color--light: PRIMARY_COLOR;
+  --md-primary-fg-color--dark:  PRIMARY_COLOR;
+  --md-accent-fg-color:         ACCENT_COLOR;
+
+  --bcms-orange:     #f5a623;
+  --bcms-dark:       #333333;
+  --bcms-grey-bg:    #f5f5f5;
+  --bcms-sidebar-bg: #f2f2f2;
+}
+
+/* ----- Navigation & header ----------------------------- */
+.md-header { background-color: var(--bcms-dark); }
+.md-header__title { color: #ffffff; font-weight: 600; }
+.md-header__button { color: #ffffff; }
+.md-header__button:hover { color: var(--bcms-orange); }
+
+.md-tabs { background-color: var(--bcms-dark); border-top: 1px solid rgba(255,255,255,0.08); }
+.md-tabs__link { color: rgba(255,255,255,0.75); }
+.md-tabs__link--active,
+.md-tabs__link:hover { color: var(--bcms-orange); }
+
+/* ----- Sidebar ----------------------------------------- */
+.md-nav__title { color: var(--bcms-orange); font-weight: 700; }
+.md-nav__item--active > .md-nav__link { color: var(--bcms-orange); font-weight: 600; }
+.md-nav__link:hover { color: var(--bcms-orange); }
+
+/* ----- Content headings -------------------------------- */
+.md-content h1 { color: var(--bcms-dark); border-bottom: 2px solid var(--bcms-orange); padding-bottom: 0.3em; }
+.md-content h2 { color: var(--bcms-dark); }
+.md-content h3 { color: #555555; }
+
+/* ----- Buttons ----------------------------------------- */
+.md-button--primary {
+  background-color: var(--bcms-orange) !important;
+  border-color: var(--bcms-orange) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0.5em 1.2em;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.md-button--primary:hover {
+  background-color: #e0961a !important;
+  border-color: #e0961a !important;
+}
+
+/* ----- Shepherd.js tour overlay ----------------------- */
+.shepherd-modal-overlay-container { fill: rgba(0,0,0,0.5); }
+
+.shepherd-element {
+  border-radius: 6px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  border: none;
+  max-width: 380px;
+}
+.shepherd-header {
+  background-color: var(--bcms-dark) !important;
+  border-radius: 6px 6px 0 0;
+  padding: 1em 1.2em 0.8em;
+}
+.shepherd-title {
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+}
+.shepherd-cancel-icon { color: rgba(255,255,255,0.6) !important; }
+.shepherd-cancel-icon:hover { color: #ffffff !important; }
+
+.shepherd-text {
+  padding: 1em 1.2em;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--bcms-dark);
+}
+.shepherd-text strong { color: var(--bcms-orange); }
+
+.shepherd-footer {
+  padding: 0.6em 1.2em 1em;
+  border-top: 1px solid #eeeeee;
+  gap: 0.5em;
+}
+.shepherd-button {
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.45em 1.1em;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.15s ease;
+}
+.shepherd-button-primary {
+  background-color: var(--bcms-orange) !important;
+  color: #ffffff !important;
+}
+.shepherd-button-primary:hover { background-color: #e0961a !important; }
+.shepherd-button-secondary {
+  background-color: transparent !important;
+  color: var(--bcms-dark) !important;
+  border: 1px solid #cccccc !important;
+}
+.shepherd-button-secondary:hover { background-color: #f5f5f5 !important; }
+
+/* ----- Tour pulse highlight --------------------------- */
+@keyframes bcms-tour-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(245,166,35,0.45); }
+  50%       { box-shadow: 0 0 0 8px rgba(245,166,35,0.12); }
+}
+.bcms-tour-highlight {
+  animation: bcms-tour-pulse 1.5s ease-in-out infinite;
+  border-radius: 4px;
+}
+
+/* ----- Demo GIF containers ---------------------------- */
+.demo-gif {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin: 1.5rem 0;
+  max-width: 100%;
+}

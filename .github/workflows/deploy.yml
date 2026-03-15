@@ -44,10 +44,16 @@ jobs:
           sed -i \
             -e "s|PRIMARY_COLOR|${{ steps.client.outputs.primary_color }}|g" \
             -e "s|ACCENT_COLOR|${{ steps.client.outputs.accent_color }}|g" \
-            stylesheets/extra.css
+            docs/stylesheets/extra.css
 
       - name: Build site
         run: mkdocs build --strict
+
+      - name: Connect to Tailscale
+        uses: tailscale/github-action@v2
+        with:
+          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
+          tags: tag:ci
 
       - name: Setup SSH key
         run: |

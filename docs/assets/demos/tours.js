@@ -8,9 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('[data-tour]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var tourName = btn.getAttribute('data-tour');
-      // Use relative path so it works under any slug (e.g. manual.w3ns.io/ventur/)
-      var base = (document.querySelector('base') || {}).href || (window.location.origin + '/');
-      fetch(base + 'assets/demos/' + tourName + '.json')
+      // MkDocs Material uses __config JSON (not a <base> tag) for the site root.
+      // "base" is a relative path like "../.." from the current page to the site root.
+      var configEl = document.getElementById('__config');
+      var mkBase = configEl ? JSON.parse(configEl.textContent).base : '../..';
+      var siteRoot = new URL(mkBase + '/', location.href).href;
+      fetch(siteRoot + 'assets/demos/' + tourName + '.json')
         .then(function (r) { return r.json(); })
         .then(function (config) { launchTour(config); })
         .catch(function (e) { console.warn('Tour not found:', tourName, e); });
