@@ -4,8 +4,10 @@
  * Usage in Markdown: add a button with data-tour="tour-name"
  * e.g. <button class="md-button md-button--primary" data-tour="dashboard">▶ Start Tour</button>
  */
-document.addEventListener('DOMContentLoaded', function () {
+function initBcmsTours() {
   document.querySelectorAll('[data-tour]').forEach(function (btn) {
+    if (btn.__tourBound) return;
+    btn.__tourBound = true;
     btn.addEventListener('click', function () {
       var tourName = btn.getAttribute('data-tour');
       // MkDocs Material uses __config JSON (not a <base> tag) for the site root.
@@ -19,7 +21,10 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(function (e) { console.warn('Tour not found:', tourName, e); });
     });
   });
-});
+}
+
+initBcmsTours();
+document.addEventListener('DOMContentLoaded', initBcmsTours);
 
 function resolveAction(action, tour) {
   if (typeof action === 'function') return action;
