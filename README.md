@@ -1,6 +1,6 @@
 # BCMS Manual Template
 
-This is the base template for all BCMS® airport client manuals. Each client gets their own branded copy deployed at `{slug}.manual.w3ns.io`.
+This is the base template for all BCMS® airport client manuals. Each client gets their own branded copy deployed at `manual.w3ns.io/{slug}/`.
 
 ---
 
@@ -63,7 +63,7 @@ In the new repo → Settings → Secrets → Actions:
 
 ### 4. Push → auto-deploys
 
-Push any commit to `main`. The site will be live at `https://{slug}.manual.w3ns.io` in ~2 minutes.
+Push any commit to `main`. The site will be live at `https://manual.w3ns.io/{slug}/` in ~2 minutes.
 
 ### 5. DNS
 

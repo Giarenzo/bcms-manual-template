@@ -1,5 +1,5 @@
 site_name: "SITE_NAME_PLACEHOLDER"
-site_url: "https://CLIENT_SLUG_PLACEHOLDER.manual.w3ns.io"
+site_url: "https://manual.w3ns.io/CLIENT_SLUG_PLACEHOLDER/"
 
 theme:
   name: material
